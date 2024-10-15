@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;PreRelease</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\ScheduleJobFactory.cs~RF57a49dfc.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
+    <PackageReference Include="Quartz" Version="3.8.1" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuartzScheduler.Common\QuartzScheduler.Common.csproj" />
+    <ProjectReference Include="..\QuartzScheduler.Dal\QuartzScheduler.Dal.csproj" />
+  </ItemGroup>
+
+</Project>
